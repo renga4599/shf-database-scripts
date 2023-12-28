@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: shf-database-scripts
+  profiles:
+    default: "sit"
+  liquibase:
+    enabled: true
+    liquibaseSchema: SHF
+    default-schema: SHF
+    database-change-log-table: DATABASE_CHANGE_LOG
+    database-change-log-lock-table: DATABASE_CHANGE_LOG_LOCK
+server:
+  port: 8079
+  servlet:
+    context-path: /${spring.application.name}
+logging:
+  level:
+    liquibase: INFO

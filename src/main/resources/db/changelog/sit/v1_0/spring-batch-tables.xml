@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="SHF-1" author="Renga">
+        <comment>Creating Spring batch tables</comment>
+        <sql>
+            CREATE TABLE BATCH_JOB_INSTANCE  (
+            JOB_INSTANCE_ID BIGINT  NOT NULL PRIMARY KEY ,
+            VERSION BIGINT ,
+            JOB_NAME VARCHAR(100) NOT NULL,
+            JOB_KEY VARCHAR(32) NOT NULL,
+            constraint JOB_INST_UN unique (JOB_NAME, JOB_KEY)
+            ) ENGINE=InnoDB;
+        </sql>
+    </changeSet>
+</databaseChangeLog>
