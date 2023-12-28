@@ -7,5 +7,7 @@
 <!--    <include file="./localmysql/changelog-v1_0.xml"/>-->
 
     <include file="./db/changelog/sit/v1_0/spring-batch-tables.xml"/>
+    <include file="./db/changelog/sit/v1_0/portfolio-table.yaml"/>
+    <include file="./db/changelog/sit/v1_0/portfolio-stocks.xml"/>
 
 </databaseChangeLog>

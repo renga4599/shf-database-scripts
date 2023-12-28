@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/SHF
     username: SHFAPPUSER
-    password: xxxxxxxxx
+    password: $nt$E9spTN$gqD&jCE3g1@9
     driverClassName: com.mysql.cj.jdbc.Driver
   liquibase:
     change-log: classpath:db/changelog/sit/changelog-sit-master.xml

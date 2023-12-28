@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: SHF13
+      author: Renga
+      changes:
+        - createTable:
+            tableName: PORTFOLIO
+            columns:
+              - column:
+                  name: ID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: PORTFOLIO_NAME
+                  type:  varchar(150)
